@@ -19,8 +19,8 @@ public interface CountryRepo extends JpaRepository<Country, Long> {
 			+ "on ms.country_id =mc.id and ms.is_active =true\r\n"
 			+ "inner join mst_city mc2 \r\n"
 			+ "on mc2.state_id =ms.id and mc2.is_active =true\r\n"
-			+ "where mc.id =:countryId and mc.is_active =true\r\n"
+			+ "where  mc.is_active =true\r\n"
 			+ "order by ms.id", nativeQuery = true)
-	public List<Map<String, Object>> getAllStateByCountryId(long countryId);
+	public List<Map<String, Object>> getAllState();
 
 }

@@ -36,10 +36,10 @@ public class CountryController {
 
 	}
 	
-	@GetMapping("/{countryId}")
-	public ResponseEntity<List<Map<String, Object>>> getAllStateByCountryId(@PathVariable long countryId) throws Exception {
+	@GetMapping("/state")
+	public ResponseEntity<List<Map<String, Object>>> getAllState() throws Exception {
 		try {
-			List<Map<String, Object>> countries = countryService.getAllStateByCountryId(countryId);
+			List<Map<String, Object>> countries = countryService.getAllState();
 			System.out.println(countries);
 			return new ResponseEntity<List<Map<String, Object>>>(countries, HttpStatus.OK);
 
