@@ -26,5 +26,11 @@ public class RegistrationController {
 		Map<String, String> resp = emailSender.sendEmail(recipients);
 		return new ResponseEntity<Object>(resp, HttpStatus.OK);
 	}
+	
+	@GetMapping("test")
+	public ResponseEntity<Object> test() {
+		
+		return new ResponseEntity<Object>("Test", HttpStatus.OK);
+	}
 
 }
