@@ -15,7 +15,7 @@ public class MstOtp {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	private String optValue;
+	private String otpValue;
 	
 	private boolean isActive;
 	
@@ -34,12 +34,12 @@ public class MstOtp {
 		this.id = id;
 	}
 
-	public String getOptValue() {
-		return optValue;
+	public String getOtpValue() {
+		return otpValue;
 	}
 
-	public void setOptValue(String optValue) {
-		this.optValue = optValue;
+	public void setOtpValue(String optValue) {
+		this.otpValue = optValue;
 	}
 
 	public boolean isActive() {
@@ -60,7 +60,7 @@ public class MstOtp {
 
 	@Override
 	public String toString() {
-		return "MstOtp [id=" + id + ", optValue=" + optValue + ", isActive=" + isActive + ", createdDate=" + createdDate
+		return "MstOtp [id=" + id + ", optValue=" + otpValue + ", isActive=" + isActive + ", createdDate=" + createdDate
 				+ "]";
 	}
 	

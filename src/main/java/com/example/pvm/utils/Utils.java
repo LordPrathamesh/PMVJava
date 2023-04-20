@@ -21,7 +21,7 @@ public class Utils {
 		Integer otp = random.nextInt(9999 - 1000 + 1) + 1000;
 		mstOtp.setActive(true);
 		mstOtp.setCreatedDate(LocalDateTime.now());
-		mstOtp.setOptValue(otp.toString());
+		mstOtp.setOtpValue(otp.toString());
 		otpRepo.save(mstOtp);
 		return otp;
 	}
