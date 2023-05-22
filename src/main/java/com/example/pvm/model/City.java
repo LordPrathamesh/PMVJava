@@ -19,7 +19,11 @@ public class City {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
+	
+	private int latitude;
+	
+	private int longitude;
+	
 	private String name;
 	
 	private boolean isActive;
@@ -36,6 +40,31 @@ public class City {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	public int getLatitude() {
+		return latitude;
+	}
+
+
+
+	public void setLatitude(int latitude) {
+		this.latitude = latitude;
+	}
+
+
+
+	public int getLongitude() {
+		return longitude;
+	}
+
+
+
+	public void setLongitude(int longitude) {
+		this.longitude = longitude;
+	}
+
+
 
 	public Long getId() {
 		return id;
@@ -78,10 +107,14 @@ public class City {
 		this.areas = areas;
 	}
 
+
 	@Override
 	public String toString() {
-		return "City [id=" + id + ", name=" + name + ", isActive=" + isActive + ", state=" + state + "]";
+		return "City [id=" + id + ", latitude=" + latitude + ", longitude=" + longitude + ", name=" + name
+				+ ", isActive=" + isActive + ", state=" + state + ", areas=" + areas + "]";
 	}
+
+	
 	
 	
 

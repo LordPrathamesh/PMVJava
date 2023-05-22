@@ -13,4 +13,7 @@ public interface AreaRepo extends JpaRepository<Area, Long> {
 			+ "where ma.city_id =:cityId and ma.is_active =true", nativeQuery = true)
 	public List<Map<String, Object>> getAllAreas(int cityId);
 
+	@Query(value = "select * from mst_area ma \r\n" + "where ma.is_active =true", nativeQuery = true)
+	public List<Map<String, Object>> getAllAreas();
+
 }

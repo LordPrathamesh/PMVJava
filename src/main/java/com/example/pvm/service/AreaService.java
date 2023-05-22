@@ -19,4 +19,8 @@ public class AreaService {
 		return areaRepo.getAllAreas(cityId);
 	}
 
+	public List<Map<String, Object>> getAllAreas() {
+		return areaRepo.getAllAreas();
+	}
+
 }
